@@ -1,0 +1,45 @@
+<div class="container-fluid d-flex flex-row p-0"> 
+
+  <div id="sidebar">
+<!-- Menu List-->
+<ul class="d-flex flex-column">
+  <li *ngFor="let menuItem of menuItems" class="list-item"> 
+    <a [routerLink]="menuItem.path">
+      <i class="fa fa-home"></i>
+      <span>{{menuItem.name}}</span>
+    </a>
+  </li>
+
+
+</ul>
+  </div>
+  <div id="rightSideWrapper" class="d-flex flex-column">
+    <header class="d-flex flex-row flex-nowrap justify-content-between" style="z-index:2"> 
+     <div class="logo-container d-flex align-items-center">
+        <img src="../assets/img/ArdisappLogo.png" width="60px" alt="logo" class="logo img-fluid">
+        <span> {{title}} </span>
+     </div>
+
+     <div *ngIf="user.name != undefined  " class="user-info d-flex align-items-center">
+        <div class="user-info-container d-flex align-items-center">
+          <img [src]="user.avatar? user.avatar : '../assets/img/ArdisappLogo.png'" alt="logo" class="avatar-container-rounded img-fluid">
+          <span class="user-info-text" style="margin-right: 30px;">{{user.name}}</span>
+      
+        </div>
+     </div>
+    </header>
+    
+    <div class="ContentBox"><!--. poner en minusculas.-->
+        <main> 
+          <router-outlet> </router-outlet>
+      </main>
+  
+    </div>
+  
+    
+    
+  </div>
+
+
+</div>
+

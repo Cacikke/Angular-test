@@ -1,0 +1,24 @@
+section{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+label{
+    color: grey;
+    font-size: 12px;
+    
+}
+.sp{
+    margin-top: 2% ;
+}
+mat-form-field{
+    width: 100%;
+   //border: none;
+    //border-bottom: 1px solid grey;
+}
+#add{
+    color: grey;
+}
+.tachado{
+    text-decoration: line-through;
+}

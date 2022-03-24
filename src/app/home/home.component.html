@@ -1,0 +1,22 @@
+
+<mat-card>
+    <mat-card-content>
+    <form>
+        <section *ngFor="let task of tasks" class="example-section sp">
+            <mat-checkbox  class="example-margin">{{task.name}}</mat-checkbox>
+            <mat-icon (click)="deleteTask(task)" matSuffix>delete</mat-icon>
+        </section>
+        <label class="sp">Add</label><br>
+        <section class="example-section sp">
+        <mat-form-field appearance="legacy">
+    
+            <input name="nameTask" matInput placeholder="" value="" [(ngModel)]=nameTask>
+    
+        </mat-form-field>
+        <mat-icon (click)="checkUser()" id="add" matSuffix>add</mat-icon>
+        </section>
+    
+    </form>
+</mat-card-content>
+</mat-card>
+
