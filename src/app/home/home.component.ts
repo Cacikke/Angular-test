@@ -13,8 +13,7 @@ import { Router, RouterModule } from '@angular/router';
 export class HomeComponent implements OnInit {
   public tasks = [
     {
-      name:'hello world'
-    
+      name:'hello world'   
     },
     {
       name:'react + nextjs'
